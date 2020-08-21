@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="widht=device-width, initial-scale=1">
+	<title>Index page 3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  	<style type="text/css">
+  		.checked{
+  			color: orange;
+  		}
+
+  		.sidenav {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidenav a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+		  color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 16px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+
+  	</style>
+
+</head>
+<body>
+
+<div>
+<!-- /// Top Navigation bar /// -->
+
+	<nav class="navbar bg-dark navbar-dark p-3 sticky-top">
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <div class="form-group">
+		  	<input type="text" id="search" name="search" placeholder="Search..." class="form-control mx-2" style="width: 333px">
+		  </div>
+		  <div>
+		  	<a href="#city" data-toggle="collapse">City<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="city">
+		  		<a href="#" style="font-size: 19px"><u>Ahmedabad</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Rajkot</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Surat</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Vadodra</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Mehsana</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#price" data-toggle="collapse">Price Range<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div id="price" class="collapse">
+		  		<a href="#" style="font-size: 19px"><u>5,000</u> - <u>10,000</u></a>
+		  		<a href="#" style="font-size: 19px"><u>10,000</u> - <u>15,000</u></a>
+		  		<a href="#" style="font-size: 19px"><u>15,000</u> - <u>20,000</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#room" data-toggle="collapse">Room Structure<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="room">
+		  		<a href="#" style="font-size: 19px"><u>A/C</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Without A/C</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#hostel" data-toggle="collapse">Hostel<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="hostel">
+		  		<a href="#" style="font-size: 19px"><u>For GIRLS</u></a>
+		  		<a href="#" style="font-size: 19px"><u>For BOYS</u></a><a href="#" style="font-size: 19px"><u>Other</u></a>
+		  	</div>
+		  </div>
+		  <a href="#" id="help">Help</a>
+		  <a href="#" id="feedback">Feedback</a>
+		</div>
+		<div id="main">
+		  <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776; </span>
+		</div>
+
+		<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "350px";
+		  document.getElementById("main").style.marginLeft = "350px";
+		  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		  document.getElementById("main").style.marginLeft= "0";
+		  document.body.style.backgroundColor = "white";
+		}
+		</script>
+		<a href="#" class="navbar-brand ml-3"><h1>OSTELLO</h1></a>
+		<button type="button" class="btn btn-outline-light ml-auto" data-toggle="modal" data-target="#mod">Login/Sign up</button>&nbsp&nbsp&nbsp
+		</div>
+	</nav>
+
+
+	<div class="modal fade" id="mod">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!--Modal header-->
+				<div class="modal-header">
+					<h4 class="modal-title">Login</h4>
+					<button class="close" type="button" data-dismiss="modal">&times;</button>
+				</div>
+				<!--Modal Body-->
+				<div class="modal-body">
+					<form method="post">
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+							<br>
+							<label for="pwd">Password:</label>
+							<input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password" maxlength="12" minlength="8">
+							<br>
+							<div class="text-inline">
+								<button type="submit" class="btn btn-primary">Login</button>
+								<a href="registration-page.html" class="float-right pb-2 btn btn-outline-info">Register here</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--Modal Footer-->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- /// Side Navigation bar /// -->
+
+	
+
+<!-- /// Center page containing hostels info /// -->
+	
+	<div class="ml-n3" style="margin-top: 10px; margin-right: 10px">
+		<ul style="list-style-type: none;">
+
+<!-- First Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/narmad/front.jpg" class="rounded px-1 float-left" alt="Narmad Bhavan" style="width:300px; height: 200px">
+						<h3 class="">Narmad Bhavan</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9922557745</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Athwa, Surat...| <abbr data-toggle="tooltip" data-placement="bottom" title="Athwa, Surat - 395007" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation For Boys in Surat</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Second Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/Saara/front.jpg" class="rounded px-1 float-left" alt="Sarabhai Bhavan" style="width: 300px; height: 200px">
+						<h3 class="">Sarabhai Bhavan</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">3.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9099567939</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Svnit Campus..| <abbr data-toggle="tooltip" data-placement="bottom" title="Svnit Campus, Athwa, Surat - 395007" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation in Surat</span><br><br>
+
+						<button class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Third Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/samras/front.jpg" class="rounded px-1 float-left" alt="Government Samras Boys Hostel " style="height: 200px; width: 300px">
+						<h3 class="">Government Samras Boys Hostel </h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9155768565</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Veer Narmad...| <abbr data-toggle="tooltip" data-placement="bottom" title="Veer Narmad South Gujarat University, Surat Ho, Surat - 395003" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation For Boys in Surat</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Fourth Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/baps/front.jpg" class="rounded px-1 float-left" alt="Baps Swaminarayan Chhatralaya" style="height: 200px; width: 300px">
+						<h3 class="">Baps Swaminarayan Chhatralaya</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">5.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+							
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-999899239</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Baps Swaminarayan Chhatralaya, ...| <abbr data-toggle="tooltip" data-placement="bottom" title="Baps Swaminarayan Chhatralaya, Bardoli Three Road, Bardoli, Surat - 394601, Near Surati Jakatnaka" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation for Girls and Boys in Surat</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Fifth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/vrunda/front.jpg" class="rounded px-1 float-left" alt="Vrundavan Girls Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Vrundavan Girls Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.4</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-972909009
+						</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							4 Archana Park, ...| <abbr data-toggle="tooltip" data-placement="bottom" title="4 Archana Park, University Road, Rajkot - 360005, Behind Dholakiya School, Near Panchayat Chowk" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation for Girls in Rajkot</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Sixth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/pati/front.jpg" class="rounded px-1 float-left" alt="Patidar Girls And Boys Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Patidar Girls And Boys Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.3</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152643655</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Patidar 3, Ramkru...| <abbr data-toggle="tooltip" data-placement="bottom" title="Patidar 3, Ramkrushn Nagar (West), Ramkrishna Nagar, Rajkot - 360002, Near Hemugadhvi Hall , Behind Virani HighSchool" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Men and Women in Rajkot</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Seventh tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/shiv/front.jpg" class="rounded px-1 float-left" alt="Shiv Girls Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Shiv Girls Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">5.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+							
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9155778964</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Plot No. - 67, Pari...| <abbr data-toggle="tooltip" data-placement="bottom" title="Plot No. - 67, Parimal Society, Aakashwani Chowk, University Road, Rajkot - 360005, Near Radhe Krishna Temple " style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Women in Rajkot</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Eighth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/om/front.jpg" class="rounded px-1 float-left" alt="Om Boys Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Om Boys Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.3</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152159775</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Part A, Om Nag...| <abbr data-toggle="tooltip" data-placement="bottom" title="Part A, Om Nagar Main Road, 40 Feet Road, Amrut Dhara Dairy Street, 150 Feet Ring Road, Rajkot - 360005, Near Mavdi Chokd" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest for Accommodation for Boys in Rajkot</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+		</ul>
+	</div>
+
+<!-- /// Pagination /// -->
+
+	<div>
+		<ul class="pagination pagination-lg justify-content-center py-4">
+			<li class="page-item">
+				<a href="index-pg-2.html" class="page-link">Previous</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-1.html" class="page-link">1</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-2.html" class="page-link">2</a>
+			</li>
+			<li class="page-item active">
+				<a href="#" class="page-link">3</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-4.html" class="page-link">Next</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

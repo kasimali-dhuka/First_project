@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="60">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+      .checked{
+        color: orange;
+      }
+
+      .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar bg-dark navbar-dark p-3 sticky-top">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="form-group">
+        <input type="text" id="search" name="search" placeholder="Search..." class="form-control mx-2" style="width: 333px">
+      </div>
+      <div>
+        <a href="#city" data-toggle="collapse">City<i class="fa fa-arrow-circle-down float-right"></i></a>
+        <div class="collapse" id="city">
+          <a href="#" style="font-size: 19px"><u>Ahmedabad</u></a>
+          <a href="#" style="font-size: 19px"><u>Rajkot</u></a>
+          <a href="#" style="font-size: 19px"><u>Surat</u></a>
+          <a href="#" style="font-size: 19px"><u>Vadodra</u></a>
+          <a href="#" style="font-size: 19px"><u>Mehsana</u></a>
+        </div>
+      </div>
+      <div>
+        <a href="#price" data-toggle="collapse">Price Range<i class="fa fa-arrow-circle-down float-right"></i></a>
+        <div id="price" class="collapse">
+          <a href="#" style="font-size: 19px"><u>5,000</u> - <u>10,000</u></a>
+          <a href="#" style="font-size: 19px"><u>10,000</u> - <u>15,000</u></a>
+          <a href="#" style="font-size: 19px"><u>15,000</u> - <u>20,000</u></a>
+        </div>
+      </div>
+      <div>
+        <a href="#room" data-toggle="collapse">Room Structure<i class="fa fa-arrow-circle-down float-right"></i></a>
+        <div class="collapse" id="room">
+          <a href="#" style="font-size: 19px"><u>A/C</u></a>
+          <a href="#" style="font-size: 19px"><u>Without A/C</u></a>
+        </div>
+      </div>
+      <div>
+        <a href="#hostel" data-toggle="collapse">Hostel<i class="fa fa-arrow-circle-down float-right"></i></a>
+        <div class="collapse" id="hostel">
+          <a href="#" style="font-size: 19px"><u>For GIRLS</u></a>
+          <a href="#" style="font-size: 19px"><u>For BOYS</u></a><a href="#" style="font-size: 19px"><u>Other</u></a>
+        </div>
+      </div>
+      <a href="#" id="help">Help</a>
+      <a href="#" id="feedback">Feedback</a>
+    </div>
+    <div id="main">
+      <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776; </span>
+    </div>
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "350px";
+      document.getElementById("main").style.marginLeft = "350px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+    </script>
+    <a href="index-pg-1.html" class="navbar-brand mr-auto"><h1 class="pl-4">OSTELLO</h1></a>
+    </div>
+  </nav>
+
+<div class="container border shadow" style="border-radius: 10px; margin-top: 10px; width: 700px">
+  <h2 class="pb-3"><u>Registration Form</u></h2>
+  <form action="" >
+    <div class="form-group">
+      <label for="FIRST-NAME">First Name :</label>
+      <input type="text" class="form-control" id="FIRST-NAME" placeholder="Enter first name" name="FIRST-NAME"  required>
+    </div>
+     <div class="form-group">
+      <label for="LAST-NAME">Last Name :</label>
+      <input type="text" class="form-control" id="LAST-NAME" placeholder="Enter last name" name="LAST-NAME" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="EMAIL" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password :</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" maxlength="16" minlength="8" required>
+    </div>
+    <div class="form-group">
+      <label for="dateofbirth">Date of Birth :</label>
+        <input type="date" class="form-control" id="dateofbirth" name="dateofbirth">
+    </div>
+<!--     <div class="form-group">
+      <label for="dateofbirth">DATE OF BIRTH:</label><br>
+      <select name="Birthday_day" id="Birthday_Day">
+      <option selected>Date</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>  
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    </select>
+    <select id="Birthday_Month" name="Birthday_Month">
+<option value="-1">Month</option>
+<option value="January">Jan</option>
+<option value="February">Feb</option>
+<option value="March">Mar</option>
+<option value="April">Apr</option>
+<option value="May">May</option>
+<option value="June">Jun</option>
+<option value="July">Jul</option>
+<option value="August">Aug</option>
+<option value="September">Sep</option>
+<option value="October">Oct</option>
+<option value="November">Nov</option>
+<option value="December">Dec</option>
+</select>
+ 
+<select name="Birthday_Year" id="Birthday_Year">
+ 
+<option value="-1">Year</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+ 
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+ 
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+</select>
+</div> -->
+<div>
+ Gender:
+ <div class="custom-control custom-radio">
+   <input type="radio" class="custom-control-input" id="male" name="gender">
+   <label class="custom-control-label text-dark" for="male">Male</label>
+ </div>
+ <div class="custom-control custom-radio">
+  <input type="radio" id="work" class="custom-control-input" name="gender">
+  <label class="custom-control-label text-dark pb-3" for="work">Female</label>
+ </div>
+</div>
+  <div class="form-group">
+      <label for="address">Address :</label>
+      <textarea class="form-control" placeholder="Enter Address" style="height: 100px"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="city">City :</label>
+      <input type="text" class="form-control" id="city" placeholder="Enter city" name="CITY" required>
+    </div>
+    <div class="form-group">
+      <label for="pincode">Pincode :</label>
+      <input type="number" class="form-control" id="pincode" placeholder="Enter pincode" name="PINCODE" max="999999" required>
+    </div>
+    <div class="form-group">
+      <label for="state">State :</label>
+      <input type="text" class="form-control" id="state" placeholder="Enter state" name="STATE" required>
+    </div>
+    <div class="form-group">
+      <label for="country">Country :</label>
+      <input type="text" class="form-control" id="country" placeholder="Enter country" name="COUNTRY" disabled="disabled" value="INDIA">
+    </div>
+    
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block pb-3" style="margin-bottom: 20px">Register</button>
+  </form>
+</div>
+
+</body>
+</html>

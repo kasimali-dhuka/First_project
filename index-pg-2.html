@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="widht=device-width, initial-scale=1">
+	<title>Index page 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  	<style type="text/css">
+  		.checked{
+  			color: orange;
+  		}
+
+  		.sidenav {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+
+		.sidenav a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+		  color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size:36px;
+		  margin-left: 50px;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 16px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+  	</style>
+
+</head>
+<body>
+<div>
+
+<!-- /// Top Navigation bar /// -->
+
+	<nav class="navbar bg-dark navbar-dark p-3 sticky-top">
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <div class="form-group">
+		  	<input type="text" id="search" name="search" placeholder="Search..." class="form-control mx-2" style="width: 333px">
+		  </div>
+		  <div>
+		  	<a href="#city" data-toggle="collapse">City<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="city">
+		  		<a href="#" style="font-size: 19px"><u>Ahmedabad</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Rajkot</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Surat</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Vadodra</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Mehsana</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#price" data-toggle="collapse">Price Range<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div id="price" class="collapse">
+		  		<a href="#" style="font-size: 19px"><u>5,000</u> - <u>10,000</u></a>
+		  		<a href="#" style="font-size: 19px"><u>10,000</u> - <u>15,000</u></a>
+		  		<a href="#" style="font-size: 19px"><u>15,000</u> - <u>20,000</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#room" data-toggle="collapse">Room Structure<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="room">
+		  		<a href="#" style="font-size: 19px"><u>A/C</u></a>
+		  		<a href="#" style="font-size: 19px"><u>Without A/C</u></a>
+		  	</div>
+		  </div>
+		  <div>
+		  	<a href="#hostel" data-toggle="collapse">Hostel<i class="fa fa-arrow-circle-down float-right"></i></a>
+		  	<div class="collapse" id="hostel">
+		  		<a href="#" style="font-size: 19px"><u>For GIRLS</u></a>
+		  		<a href="#" style="font-size: 19px"><u>For BOYS</u></a>
+		  	</div>
+		  </div>
+		  <a href="#" id="help">Help</a>
+		  <a href="#" id="feedback">Feedback</a>
+		</div>
+		<div id="main">
+		  <span style="font-size:30px; cursor:pointer; color: white" onclick="openNav()">&#9776; </span>
+		</div>
+
+		<script>
+		function openNav() {
+		  document.getElementById("mySidenav").style.width = "350px";
+		  document.getElementById("main").style.marginLeft = "350px";
+		  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidenav").style.width = "0";
+		  document.getElementById("main").style.marginLeft= "0";
+		  document.body.style.backgroundColor = "white";
+		}
+		</script>
+		<a href="#" class="navbar-brand ml-3"><h1>OSTELLO</h1></a>
+		<button type="button" class="btn btn-outline-light ml-auto" data-toggle="modal" data-target="#mod">Login/Sign up</button>&nbsp&nbsp&nbsp
+		</div>
+	</nav>
+
+
+	<div class="modal fade" id="mod">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<!--Modal header-->
+				<div class="modal-header">
+					<h4 class="modal-title">Login</h4>
+					<button class="close" type="button" data-dismiss="modal">&times;</button>
+				</div>
+				<!--Modal Body-->
+				<div class="modal-body">
+					<form method="post">
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+							<br>
+							<label for="pwd">Password:</label>
+							<input type="password" class="form-control" name="pwd" id="pwd" placeholder="Enter password" maxlength="12" minlength="8">
+							<br>
+							<div class="text-inline">
+								<button type="submit" class="btn btn-primary">Login</button>
+								<a href="registration-page.html" class="float-right pb-2 btn btn-outline-info">Register here</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--Modal Footer-->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- /// Center page containing hostels info /// -->
+	
+	<div class="ml-n3" style="margin-top: 10px; margin-right: 10px">
+		<ul style="list-style-type: none;">
+
+<!-- First Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/mk-hostel/front.jpg" class="rounded px-1 float-left" alt="M.K Paying Guest Service" style="width:300px; height: 200px">
+						<h3 class="">M.K Paying Guest Service</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">3.5</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152120691</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Near Vastrapur Lake...| <abbr data-toggle="tooltip" data-placement="bottom" title="Kalash Appartment, Vastrapur, Ahmedabad - 380015, Near Vastrapur Lake" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for MEN</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Second Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/royal-pg/front.jpg" class="rounded px-1 float-left" alt="Royal Paying Guest" style="width: 300px; height: 200px">
+						<h3 class="">Royal Paying Guest</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">3.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152165516</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Naroda Dehgam Ro..| <abbr data-toggle="tooltip" data-placement="bottom" title="Bunglow No 60 & 61, Hanspura Residency, Naroda - Dehgam Road, Nava Naroda, Ahmedabad - 382330, Dehgam Circle, Ring Road" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Men</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Third Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/nks-pg/front.jpg" class="rounded px-1 float-left" alt="Nks Pg Services" style="height: 200px; width: 300px">
+						<h3 class="">Nks Pg Services</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">5</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152156761</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Satellite Shivran...| <abbr data-toggle="tooltip" data-placement="bottom" title="3, Moti Park Society, Satellite, Shivranjani, Ahmedabad - 380015, Near BRTS STOP, Opposite Vodafone Store" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Men and Women in Ahmedabad</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Fourth Tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/vaibhavya/front.jpg" class="rounded px-1 float-left" alt="Vaibhavya Boys Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Vaibhavya Boys Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">3.9</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152109074</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Bopal Main Road ...| <abbr data-toggle="tooltip" data-placement="bottom" title="403, 4th Floor Bhavya Shopping Centre, Bopal Main Road, Bopal, Ahmedabad - 380058, Opposite Government Tubewell" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for MEN</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Fifth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/soni-hostel/front.jpg" class="rounded px-1 float-left" alt="Soni Boys Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Soni Boys Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9909095621</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Nava Vadaj, Bhimji...| <abbr data-toggle="tooltip" data-placement="bottom" title="32, Soni Boys Hostel, New Wadaj Road, Nava Vadaj, Bhimjipura, Ahmedabad - 380013, Near Naranpura Police Station" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Hostel Accommodation for Boys</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Sixth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/vgec-hostel/front.jpg" class="rounded px-1 float-left" alt="Vgec Boys Hostel-2" style="height: 200px; width: 300px">
+						<h3 class="">Vgec Boys Hostel-2</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.0</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-07923293866</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Nigam Nagar, Chand...| <abbr data-toggle="tooltip" data-placement="bottom" title="Nigam Nagar, Chandkheda, Ahmedabad - 382424" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Boys student</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Seventh tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/amc-hostel/front.jpg" class="rounded px-1 float-left" alt="Amc Met Medical College Boys Hostel" style="height: 200px; width: 300px">
+						<h3 class="">Amc Met Medical College Boys Hostel</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">4.2</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-8733061651</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Maninagar ...| <abbr data-toggle="tooltip" data-placement="bottom" title="Maninagar, Ahmedabad - 380008" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Hostel Accommodation for Boys Student</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+<!-- Eighth tab -->
+
+			<li>
+				<div class="container shadow">
+					<div class="p-3">
+						<img src="Images/sai-hostel/front.jpg" class="rounded px-1 float-left" alt="Sai pgs" style="height: 200px; width: 300px">
+						<h3 class="">Sai PGs</h3>
+						<div class="pb-3">
+							<button type="button" class="btn btn-success">3.5</button>&nbsp
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+						<i class="fa fa-phone "></i>&nbsp<span>(+91)-9152101944</span>
+						<br>
+						<p class="font-weight-lighter pt-3">
+							Satellite...| <abbr data-toggle="tooltip" data-placement="bottom" title="6 Indus Park Society, Satellite, Ahmedabad - 380015, Near Isro, Opposite Sundarvan" style="text-decoration: none;">more</abbr>
+						</p>
+						
+						<!-- script tag for tooltip -->
+						
+						<script type="text/javascript">
+							$(document).ready(function(){
+		  						$('[data-toggle="tooltip"]').tooltip();
+		  					});
+						</script>
+
+						<!-- End of the script tag -->
+
+						<span class="font-weight-lighter pb-3">Paying Guest Accommodation for Boys and Girls</span><br><br>
+
+						<button onclick="document.location = '#'" class="btn btn-outline-success btn-block">Get more info</button>
+
+					</div>
+				
+				</div>
+			</li>
+
+		</ul>
+	</div>
+
+<!-- /// Pagination /// -->
+
+	<div>
+		<ul class="pagination pagination-lg justify-content-center py-4">
+			<li class="page-item">
+				<a href="index-pg-1.html" class="page-link">Previous</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-1.html" class="page-link">1</a>
+			</li>
+			<li class="page-item active">
+				<a href="#" class="page-link">2</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-3.html" class="page-link">3</a>
+			</li>
+			<li class="page-item">
+				<a href="index-pg-3.html" class="page-link">Next</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+    dest1 = destination()
+    dest1.name = "Annapurna Hostels"
+    dest1.price = 600
+    dest1.desc = "Opp Municipal, CG...| more"
+    dest1.img = "https://pix10.agoda.net/hotelImages/446/4466813/4466813_18021812560062088882.jpg?s=1024x768"
+    dest1.offer = False

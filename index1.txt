@@ -1,0 +1,54 @@
+dest1=destination()
+dest1.name = "Annapurna Hostels"
+dest1.number = "(+91)-9152121134"
+dest1.city = "Ahmedabad"
+dest1.accom = "Boys"
+
+
+dest2 = destination()
+dest2.name = "Radha Krishna Residential Accommodation"
+dest2.number = "(+91)-9152105158"
+dest2.city = "Ahmedabad"
+dest2.accom = "Boys"
+
+
+dest3 = destination()
+dest3.name = "Ahmedabad Hostel and Paying Guest Accommodation"
+dest3.number = "(+91)-9152169064"
+dest3.city = "Ahmedabad"
+dest3.accom = "Boys"
+
+
+dest4 = destination()
+dest4.name = "Greenwood Hostel"
+dest4.number = "(+91)-9152101606"
+dest4.city = "Ahmedabad"
+dest4.accom = "Boys"
+
+
+dest5 = destination()
+dest5.name = "Stadiumward Girls Hostel"
+dest5.number = "(+91)-9152101323"
+dest5.city = "Ahmedabad"
+dest5.accom = "Girls"
+
+
+dest6 = destination()
+dest6.name = "Sanskar Pg and Hostel"
+dest6.number = "(+91)-9152122207"
+dest6.city = "Ahmedabad"
+dest6.accom = "Boys", "Girls"
+
+
+dest7 = destination()
+dest7.name = "Smg Girls Hostel"
+dest7.number = "(+91)-9152137515"
+dest7.city = "Ahmedabad"
+dest7.accom = "Girls"
+
+
+dest8 = destination()
+dest8.name = "Oasis PG"
+dest8.number = "(+91)-9152159775"
+dest8.city = "Ahmedabad"
+dest8.accom = "Boys"
